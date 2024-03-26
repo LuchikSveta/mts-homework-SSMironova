@@ -1,5 +1,7 @@
 package ru.mts.siebel.api.repository;
 
+import java.time.LocalDate;
+
 public interface IAnimal {
 
     String getBreed();
@@ -9,5 +11,7 @@ public interface IAnimal {
     Double getCost();
 
     String getCharacter();
+
+    LocalDate getBirthDate();
 
 }
