@@ -2,7 +2,7 @@ package ru.mts.siebel.model;
 
 public class Predator extends AbstractAnimal {
 
-    public Predator(String name, String breed, double cost, String character, String birthDate) {
+    public Predator(final String name, final String breed, final double cost, final String character, final String birthDate) {
 
         super(name, breed, cost, character, birthDate);
 

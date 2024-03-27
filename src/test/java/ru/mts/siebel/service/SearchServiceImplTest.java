@@ -67,8 +67,7 @@ class SearchServiceImplTest {
     @DisplayName("Проверка на невисокосный год с параметрами")
     @ValueSource(ints = {2014, 2018, 2019, 2021, 2022, 2023})
     void checkNotLeapYearAnimal(Integer year) throws Exception {
-        AbstractAnimal animal = new Wolf("White Fang", "Wolf", 1000, "Ferocious", "2019-07-12");
-        animal.setBirthDate(LocalDate.of(year, 1 + (int)(Math.random() * 11), 1 + (int)(Math.random() * 28)));
+        AbstractAnimal animal = new Wolf("White Fang", "Wolf", 1000, "Ferocious", LocalDate.of(year, 1 + (int)(Math.random() * 11), 1 + (int)(Math.random() * 28)).toString());
         service.checkLeapYearAnimal(animal);
         assertEquals("WHITE FANG не был рожден в високосный год\r\n", outContent.toString());
     }

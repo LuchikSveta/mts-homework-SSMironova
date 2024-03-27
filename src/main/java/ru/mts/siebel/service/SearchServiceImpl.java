@@ -8,7 +8,7 @@ import ru.mts.siebel.model.AbstractAnimal;
 public class SearchServiceImpl implements ISearchService {
 
     @Override
-    public void checkLeapYearAnimal(AbstractAnimal animal) throws Exception {
+    public void checkLeapYearAnimal(final AbstractAnimal animal) throws Exception {
         if (animal == null)
             throw new InvalidAnimalException();
         if (animal.getBirthDate() == null)

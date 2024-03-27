@@ -5,7 +5,7 @@ import ru.mts.siebel.model.AbstractAnimal;
 
 public class CreateAnimalServiceImpl implements ICreateAnimalService {
 
-    public void createAnimalFromParent() {
+    public void createAnimalFromParent() throws Exception {
         ICreateAnimalService.super.createAnimal();
     }
 
@@ -18,7 +18,7 @@ public class CreateAnimalServiceImpl implements ICreateAnimalService {
         } while (number++ < 10);
     }
 
-    public void createAnimal(int number) {
+    public void createAnimal(final int number) {
         for (int i = 1; i < number + 1; i++) {
             AbstractAnimal animal = getAnimal(i, "Animal" + i, 1000 * i, "Character" + i);
             System.out.println(animal);

@@ -3,7 +3,7 @@ package ru.mts.siebel.exception;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
-public class InvalidAnimalException extends AbstractUncheckedException {
+public class InvalidAnimalException extends RuntimeException {
 
     private static final String ERROR_MESSAGE = "На вход пришел некорректный объект животного";
 
