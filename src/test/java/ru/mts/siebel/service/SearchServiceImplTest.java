@@ -41,7 +41,7 @@ class SearchServiceImplTest {
 
     @Test
     @DisplayName("Проверка на високосный год")
-    void checkLeapYearAnimalKitty() throws Exception {
+    void checkLeapYearAnimalKitty() throws InvalidAnimalBirthDateException {
         AbstractAnimal animal = new Cat("Kitty", "Cat", 1000, "Nice", "2020-05-12");
         service.checkLeapYearAnimal(animal);
         assertEquals("KITTY был рожден в високосный год\r\n", outContent.toString());
@@ -49,7 +49,7 @@ class SearchServiceImplTest {
 
     @Test
     @DisplayName("Проверка на невисокосный год")
-    void checkLeapYearAnimalWhiteFang() throws Exception {
+    void checkLeapYearAnimalWhiteFang() throws InvalidAnimalBirthDateException {
         AbstractAnimal animal = new Wolf("White Fang", "Wolf", 1000, "Ferocious", "2019-07-12");
         service.checkLeapYearAnimal(animal);
         assertEquals("WHITE FANG не был рожден в високосный год\r\n", outContent.toString());
@@ -58,7 +58,7 @@ class SearchServiceImplTest {
     @ParameterizedTest
     @DisplayName("Проверка на високосный год с параметрами")
     @MethodSource("fetchDataLeapYear")
-    void checkLeapYearAnimal(final AbstractAnimal animal) throws Exception {
+    void checkLeapYearAnimal(final AbstractAnimal animal) throws InvalidAnimalBirthDateException {
         service.checkLeapYearAnimal(animal);
         assertEquals(animal.getName().toUpperCase() + " был рожден в високосный год\r\n", outContent.toString());
     }
@@ -66,9 +66,8 @@ class SearchServiceImplTest {
     @ParameterizedTest
     @DisplayName("Проверка на невисокосный год с параметрами")
     @ValueSource(ints = {2014, 2018, 2019, 2021, 2022, 2023})
-    void checkNotLeapYearAnimal(Integer year) throws Exception {
-        AbstractAnimal animal = new Wolf("White Fang", "Wolf", 1000, "Ferocious", "2019-07-12");
-        animal.setBirthDate(LocalDate.of(year, 1 + (int)(Math.random() * 11), 1 + (int)(Math.random() * 28)));
+    void checkNotLeapYearAnimal(Integer year) throws InvalidAnimalBirthDateException {
+        AbstractAnimal animal = new Wolf("White Fang", "Wolf", 1000, "Ferocious", LocalDate.of(year, 1 + (int)(Math.random() * 11), 1 + (int)(Math.random() * 28)).toString());
         service.checkLeapYearAnimal(animal);
         assertEquals("WHITE FANG не был рожден в високосный год\r\n", outContent.toString());
     }

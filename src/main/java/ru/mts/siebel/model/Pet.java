@@ -2,7 +2,7 @@ package ru.mts.siebel.model;
 
 public class Pet extends AbstractAnimal {
 
-    public Pet(String name, String breed, double cost, String character, String birthDate) {
+    public Pet(final String name, final String breed, final double cost, final String character, final String birthDate) {
 
         super(name, breed, cost, character, birthDate);
 

@@ -1,19 +1,23 @@
 package ru.mts.siebel.api.service;
 
+import ru.mts.siebel.exception.InvalidAnimalBirthDateException;
 import ru.mts.siebel.model.*;
+import ru.mts.siebel.service.SearchServiceImpl;
 import ru.mts.siebel.util.RandomDateUtil;
 
 public interface ICreateAnimalService {
 
-    default void createAnimal() {
+    default void createAnimal() throws InvalidAnimalBirthDateException {
+        ISearchService searchService = new SearchServiceImpl();
         int number = 0;
         while (number++ < 10) {
             AbstractAnimal animal = getAnimal(number, "Animal" + number, 1000, "Character" + number);
+            searchService.checkLeapYearAnimal(animal);
             System.out.println(animal);
         }
     }
     
-    default AbstractAnimal getAnimal(int num, String name, double cost, String character) {
+    default AbstractAnimal getAnimal(final int num, final String name, double cost, final String character) {
         int n = 1 + (int)(Math.random() * 5);
         String birthDate = RandomDateUtil.createRandomDate(2010, 2024).toString();
         cost *= (num + n);
