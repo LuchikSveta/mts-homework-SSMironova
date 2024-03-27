@@ -16,6 +16,7 @@ public class CreateAnimalServiceImpl implements ICreateAnimalService {
         int number = 1;
         do {
             AbstractAnimal animal = getAnimal(number, "Animal" + number, 1000 * number, "Character" + number);
+            animal.setBirthDate(null);
             searchService.checkLeapYearAnimal(animal);
             System.out.println(animal);
         } while (number++ < 10);
