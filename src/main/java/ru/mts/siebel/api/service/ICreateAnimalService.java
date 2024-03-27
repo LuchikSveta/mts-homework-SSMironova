@@ -11,7 +11,6 @@ public interface ICreateAnimalService {
         int number = 0;
         while (number++ < 10) {
             AbstractAnimal animal = getAnimal(number, "Animal" + number, 1000, "Character" + number);
-            animal.setBirthDate(null);
             searchService.checkLeapYearAnimal(animal);
             System.out.println(animal);
         }

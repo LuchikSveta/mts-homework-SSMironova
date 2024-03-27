@@ -8,7 +8,6 @@ public interface RandomDateUtil {
         int day = createRandomIntBetween(1, 28);
         int month = createRandomIntBetween(1, 12);
         int year = createRandomIntBetween(startYear, endYear);
-        System.out.println(LocalDate.of(year, month, day));
         return LocalDate.of(year, month, day);
     }
 
