@@ -1,5 +1,6 @@
 package ru.mts.siebel;
 
+import ru.mts.siebel.exception.InvalidAnimalBirthDateException;
 import ru.mts.siebel.service.CreateAnimalServiceImpl;
 
 public class Main {
@@ -13,7 +14,7 @@ public class Main {
             createAnimalService.createAnimal();
             System.out.println("\nЦикл for");
             createAnimalService.createAnimal(6);
-        } catch (final Exception e) {
+        } catch (final InvalidAnimalBirthDateException e) {
             throw new RuntimeException("При вызове метода произошла ошибка\n" + e);
         }
     }

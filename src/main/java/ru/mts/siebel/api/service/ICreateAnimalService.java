@@ -1,12 +1,13 @@
 package ru.mts.siebel.api.service;
 
+import ru.mts.siebel.exception.InvalidAnimalBirthDateException;
 import ru.mts.siebel.model.*;
 import ru.mts.siebel.service.SearchServiceImpl;
 import ru.mts.siebel.util.RandomDateUtil;
 
 public interface ICreateAnimalService {
 
-    default void createAnimal() throws Exception {
+    default void createAnimal() throws InvalidAnimalBirthDateException {
         ISearchService searchService = new SearchServiceImpl();
         int number = 0;
         while (number++ < 10) {

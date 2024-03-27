@@ -3,6 +3,7 @@ package ru.mts.siebel.model;
 import ru.mts.siebel.api.repository.IAnimal;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public abstract class AbstractAnimal implements IAnimal {
 
@@ -10,7 +11,7 @@ public abstract class AbstractAnimal implements IAnimal {
     protected String breed; // порода
     protected Double cost; // цена в магазине
     protected String character; // характер
-    protected LocalDate birthDate; // день рождения в формате dd.MM.yyyy
+    protected LocalDate birthDate; // день рождения
 
     public AbstractAnimal(final String name, final String breed, final double cost, final String character, final String birthDate) {
         this.name = name;
@@ -18,7 +19,6 @@ public abstract class AbstractAnimal implements IAnimal {
         this.cost = cost;
         this.character = character;
         this.birthDate = LocalDate.parse(birthDate);
-        //this.birthDate = LocalDate.parse(LocalDate.parse(birthDate).format(DateTimeFormatter.ofPattern("dd-MM-yyyy")));
     }
 
     @Override
@@ -69,6 +69,10 @@ public abstract class AbstractAnimal implements IAnimal {
     @Override
     public String toString() {
         return getClass().getSimpleName() + ": " + this.getName();
+    }
+
+    public String getBirthDateFormat() {
+        return birthDate.format(DateTimeFormatter.ofPattern("dd-MM-yyyy"));
     }
 
 }
