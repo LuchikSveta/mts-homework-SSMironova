@@ -10,13 +10,9 @@ public interface IAnimalsRepository {
 
     void clear();
 
-    void setAnimalsMap (Map<String, List<IAnimal>> animalsMap);
+    void setAnimalsFromMap(Map<String, List<IAnimal>> animalsMap);
 
-    void setAnimalsListFromMap(Map<String, List<IAnimal>> animalsMap);
-
-    List<IAnimal> getList();
-
-    Map<String, List<IAnimal>> getMap();
+    List<IAnimal> get();
 
     Map<String, LocalDate> findLeapYearNames();
 
