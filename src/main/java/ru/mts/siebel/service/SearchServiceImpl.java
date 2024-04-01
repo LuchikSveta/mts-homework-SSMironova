@@ -9,14 +9,17 @@ public class SearchServiceImpl implements ISearchService {
 
     @Override
     public void checkLeapYearAnimal(final AbstractAnimal animal) throws InvalidAnimalBirthDateException {
-        if (animal == null)
+        if (animal == null) {
             throw new InvalidAnimalException();
-        if (animal.getBirthDate() == null)
+        }
+        if (animal.getBirthDate() == null) {
             throw new InvalidAnimalBirthDateException("У животного " + animal.getClass().getSimpleName().toUpperCase() + " не указана дата его рождения");
-        if (animal.getBirthDate().isLeapYear())
+        }
+        if (animal.getBirthDate().isLeapYear()) {
             System.out.println(animal.getName().toUpperCase() + " был рожден в високосный год");
-        else
+        } else {
             System.out.println(animal.getName().toUpperCase() + " не был рожден в високосный год");
+        }
     }
 
 }

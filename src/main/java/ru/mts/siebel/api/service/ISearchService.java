@@ -5,6 +5,6 @@ import ru.mts.siebel.model.AbstractAnimal;
 
 public interface ISearchService {
 
-    void checkLeapYearAnimal(final AbstractAnimal animal) throws InvalidAnimalBirthDateException;
+    void checkLeapYearAnimal(AbstractAnimal animal) throws InvalidAnimalBirthDateException;
 
 }
