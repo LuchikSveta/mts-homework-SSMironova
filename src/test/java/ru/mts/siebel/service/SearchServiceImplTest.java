@@ -86,7 +86,7 @@ class SearchServiceImplTest {
     void checkLeapYearAnimalWithDateException(final AbstractAnimal animal) {
         animal.setBirthDate(null);
         Exception exception = assertThrows(InvalidAnimalBirthDateException.class, () -> service.checkLeapYearAnimal(animal));
-        assertEquals("У животного " + animal.getClass().getSimpleName().toUpperCase() + " не указана дата его рождения", exception.getMessage());
+        assertEquals("У животного " + animal.getClassName().toUpperCase() + " не указана дата его рождения", exception.getMessage());
     }
 
     private static Stream<Arguments> fetchData() {

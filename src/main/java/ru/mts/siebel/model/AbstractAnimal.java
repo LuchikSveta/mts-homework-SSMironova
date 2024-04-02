@@ -3,6 +3,7 @@ package ru.mts.siebel.model;
 import ru.mts.siebel.api.repository.IAnimal;
 
 import java.time.LocalDate;
+import java.time.Period;
 import java.time.format.DateTimeFormatter;
 
 public abstract class AbstractAnimal implements IAnimal {
@@ -68,11 +69,27 @@ public abstract class AbstractAnimal implements IAnimal {
 
     @Override
     public String toString() {
-        return getClass().getSimpleName() + ": " + this.getName();
+        return getClassName() + ": " + name;
     }
 
+    @Override
+    public String getClassName() {
+        return getClass().getSimpleName();
+    }
+
+    @Override
+    public String getClassAndName() {
+        return getClassName() + " " + name;
+    }
+
+    @Override
     public String getBirthDateFormat() {
         return birthDate.format(DateTimeFormatter.ofPattern("dd-MM-yyyy"));
+    }
+
+    @Override
+    public int getAge() {
+        return Period.between(birthDate, LocalDate.now()).getYears();
     }
 
 }

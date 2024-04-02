@@ -24,6 +24,6 @@ public interface IAnimalsRepository {
 
     List<IAnimal> findOldAndExpensive();
 
-    List<String> findMinConstAnimals();
+    List<String> findMinCostAnimals();
 
 }

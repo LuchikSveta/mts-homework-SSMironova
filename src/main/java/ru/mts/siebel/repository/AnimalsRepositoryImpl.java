@@ -8,7 +8,6 @@ import ru.mts.siebel.exception.InvalidAverageCostException;
 import ru.mts.siebel.exception.InvalidMaxAgeException;
 
 import java.time.LocalDate;
-import java.time.Period;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -45,7 +44,7 @@ public class AnimalsRepositoryImpl implements IAnimalsRepository {
         }
         return animals.stream()
                 .filter(animal -> animal.getBirthDate().isLeapYear())
-                .collect(Collectors.toMap(animal -> animal.getClass().getSimpleName() + " " + animal.getName(), IAnimal::getBirthDate));
+                .collect(Collectors.toMap(IAnimal::getClassAndName, IAnimal::getBirthDate));
     }
 
     @Override
@@ -53,19 +52,17 @@ public class AnimalsRepositoryImpl implements IAnimalsRepository {
         if (animals.size() == 0) {
             throw new EmptyAnimalsException();
         }
-        Map<IAnimal, Integer> animalsMaxAge = animals.stream()
-                .filter(animal -> Period.between(animal.getBirthDate(), LocalDate.now()).getYears() >=
-                        animals.stream()
-                                .mapToInt(a -> Period.between(a.getBirthDate(), LocalDate.now()).getYears())
-                                .max()
-                                .orElseThrow(InvalidMaxAgeException::new))
-                .collect(Collectors.toMap(animal -> animal, animal -> Period.between(animal.getBirthDate(), LocalDate.now()).getYears()));
-
         Map<IAnimal, Integer> animalsOlderN = animals.stream()
-                .filter(animal -> Period.between(animal.getBirthDate(), LocalDate.now()).getYears() > n)
-                .collect(Collectors.toMap(animal -> animal, animal -> Period.between(animal.getBirthDate(), LocalDate.now()).getYears()));
+                .filter(animal -> animal.getAge() > n)
+                .collect(Collectors.toMap(animal -> animal, IAnimal::getAge));
         if (animalsOlderN.size() == 0) {
-            return animalsMaxAge;
+            int maxAge = animals.stream()
+                    .mapToInt(IAnimal::getAge)
+                    .max()
+                    .orElseThrow(InvalidMaxAgeException::new);
+            return animals.stream()
+                    .filter(animal -> animal.getAge() >= maxAge)
+                    .collect(Collectors.toMap(animal -> animal, IAnimal::getAge));
         }
         return animalsOlderN;
     }
@@ -76,7 +73,7 @@ public class AnimalsRepositoryImpl implements IAnimalsRepository {
             throw new EmptyAnimalsException();
         }
         return animals.stream()
-                .collect(Collectors.groupingBy(animal -> animal.getClass().getSimpleName()));
+                .collect(Collectors.groupingBy(IAnimal::getClassName));
     }
 
     @Override
@@ -85,7 +82,7 @@ public class AnimalsRepositoryImpl implements IAnimalsRepository {
             throw new EmptyAnimalsException();
         }
         return animals.stream()
-                .mapToInt(animal -> Period.between(animal.getBirthDate(), LocalDate.now()).getYears())
+                .mapToInt(IAnimal::getAge)
                 .average()
                 .orElseThrow(InvalidAverageAgeException::new);
     }
@@ -95,19 +92,19 @@ public class AnimalsRepositoryImpl implements IAnimalsRepository {
         if (animals.size() == 0) {
             throw new EmptyAnimalsException();
         }
+        double averageCost = animals.stream()
+                .mapToDouble(IAnimal::getCost)
+                .average()
+                .orElseThrow(InvalidAverageCostException::new);
         return animals.stream()
-                .filter(animal -> Period.between(animal.getBirthDate(), LocalDate.now()).getYears() > 5)
-                .filter(animal -> animal.getCost() >
-                        animals.stream()
-                                .mapToDouble(IAnimal::getCost)
-                                .average()
-                                .orElseThrow(InvalidAverageCostException::new))
+                .filter(animal -> animal.getAge() > 5)
+                .filter(animal -> animal.getCost() > averageCost)
                 .sorted(Comparator.comparing(IAnimal::getBirthDate))
                 .collect(Collectors.toList());
     }
 
     @Override
-    public List<String> findMinConstAnimals() {
+    public List<String> findMinCostAnimals() {
         if (animals.size() == 0) {
             throw new EmptyAnimalsException();
         }

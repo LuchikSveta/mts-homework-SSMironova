@@ -20,7 +20,7 @@ public interface ICreateAnimalService {
         while (number++ < 10) {
             AbstractAnimal animal = getAnimal(number, 1000, "Character" + number);
             searchService.checkLeapYearAnimal(animal);
-            String animalType = animal.getClass().getSimpleName();
+            String animalType = animal.getClassName();
             animals.computeIfAbsent(animalType, k -> new ArrayList<>());
             animals.get(animalType).add(animal);
             System.out.println(animal);
@@ -35,15 +35,15 @@ public interface ICreateAnimalService {
         cost *= (num + n);
         switch (n) {
             case 0:
-                return new Cat(name[n], "Cat" + num, cost, character, birthDate);
+                return new Cat(name[n] + n, "Cat" + num, cost, character, birthDate);
             case 1:
-                return new Dog(name[n], "Dog" + num, cost, character, birthDate);
+                return new Dog(name[n] + n, "Dog" + num, cost, character, birthDate);
             case 2:
-                return new Mouse(name[n], "Mouse" + num, cost, character, birthDate);
+                return new Mouse(name[n] + n, "Mouse" + num, cost, character, birthDate);
             case 3:
-                return new Shark(name[n], "Shark" + num, cost, character, birthDate);
+                return new Shark(name[n] + n, "Shark" + num, cost, character, birthDate);
             case 4:
-                return new Wolf(name[n], "Wolf" + num, cost, character, birthDate);
+                return new Wolf(name[n] + n, "Wolf" + num, cost, character, birthDate);
             default:
                 return null;
         }

@@ -41,7 +41,7 @@ public class Main {
                 System.out.println("\nЖивотные, возраст которых больше 5 лет и стоимость которых больше средней стоимости всех животных:\n" + animalsOldAndExpensive);
             }
 
-            System.out.println("\n3 животных с самой низкой ценой: \n" + animalsRepository.findMinConstAnimals());
+            System.out.println("\n3 животных с самой низкой ценой: \n" + animalsRepository.findMinCostAnimals());
         } catch (final InvalidAnimalBirthDateException e) {
             throw new RuntimeException("При вызове метода произошла ошибка\n" + e);
         }

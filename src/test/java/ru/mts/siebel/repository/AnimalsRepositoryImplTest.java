@@ -89,15 +89,15 @@ class AnimalsRepositoryImplTest {
     }
 
     @Test
-    @DisplayName("Проверка метода findMinConstAnimals на корректность")
+    @DisplayName("Проверка метода findMinCostAnimals на корректность")
     void findMinConstAnimals() {
-        List<String> animals = repository.findMinConstAnimals();
+        List<String> animals = repository.findMinCostAnimals();
         assertEquals(3, animals.size());
         assertTrue(animals.contains("Marusya"));
         assertTrue(animals.contains("Kuzya"));
         assertTrue(animals.contains("Barsik"));
         addMoreAnimals();
-        animals = repository.findMinConstAnimals();
+        animals = repository.findMinCostAnimals();
         assertEquals(3, animals.size());
         assertTrue(animals.contains("Sweety"));
         assertTrue(animals.contains("Kuzya"));
@@ -148,10 +148,10 @@ class AnimalsRepositoryImplTest {
     }
 
     @Test
-    @DisplayName("Проверка метода findMinConstAnimals. Выброс ошибки из-за отсутсвтвия животных")
+    @DisplayName("Проверка метода findMinCostAnimals. Выброс ошибки из-за отсутсвтвия животных")
     void findMinConstAnimalsEmptyRep() {
         repository.clear();
-        RuntimeException runtimeException = assertThrows(EmptyAnimalsException.class, repository::findMinConstAnimals);
+        RuntimeException runtimeException = assertThrows(EmptyAnimalsException.class, repository::findMinCostAnimals);
         assertEquals("На вход пришел пустой список животных " + LocalDate.now().format(DateTimeFormatter.ofPattern("dd.MM.yyyy")), runtimeException.getMessage());
     }
 

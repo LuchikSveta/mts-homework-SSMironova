@@ -25,7 +25,7 @@ public class CreateAnimalServiceImpl implements ICreateAnimalService {
         do {
             AbstractAnimal animal = getAnimal(number, 1000 * number, "Character" + number);
             searchService.checkLeapYearAnimal(animal);
-            String animalType = animal.getClass().getSimpleName();
+            String animalType = animal.getClassName();
             animals.computeIfAbsent(animalType, k -> new ArrayList<>());
             animals.get(animalType).add(animal);
             System.out.println(animal);
@@ -40,7 +40,7 @@ public class CreateAnimalServiceImpl implements ICreateAnimalService {
         for (int i = 1; i < number + 1; i++) {
             AbstractAnimal animal = getAnimal(i, 1000 * i, "Character" + i);
             searchService.checkLeapYearAnimal(animal);
-            String animalType = animal.getClass().getSimpleName();
+            String animalType = animal.getClassName();
             animals.computeIfAbsent(animalType, k -> new ArrayList<>());
             animals.get(animalType).add(animal);
             System.out.println(animal);
