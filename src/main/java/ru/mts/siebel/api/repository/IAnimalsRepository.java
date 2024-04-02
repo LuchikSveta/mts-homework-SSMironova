@@ -18,6 +18,12 @@ public interface IAnimalsRepository {
 
     Map<IAnimal, Integer> findOlderAnimal(int n);
 
-    Map<String, Integer> findDuplicate();
+    Map<String, List<IAnimal>> findDuplicate();
+
+    Double findAverageAge();
+
+    List<IAnimal> findOldAndExpensive();
+
+    List<String> findMinConstAnimals();
 
 }

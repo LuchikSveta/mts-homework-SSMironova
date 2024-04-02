@@ -14,4 +14,6 @@ public interface IAnimal {
 
     LocalDate getBirthDate();
 
+    String getBirthDateFormat();
+
 }

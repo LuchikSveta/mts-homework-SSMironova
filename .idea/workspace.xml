@@ -7,6 +7,12 @@
     <list default="true" id="58111045-0b5a-494a-86a2-faae078778d6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/mts/siebel/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mts/siebel/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mts/siebel/api/repository/IAnimal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mts/siebel/api/repository/IAnimal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mts/siebel/api/repository/IAnimalsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mts/siebel/api/repository/IAnimalsRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mts/siebel/api/service/ICreateAnimalService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mts/siebel/api/service/ICreateAnimalService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mts/siebel/repository/AnimalsRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mts/siebel/repository/AnimalsRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mts/siebel/service/CreateAnimalServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mts/siebel/service/CreateAnimalServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/mts/siebel/repository/AnimalsRepositoryImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/mts/siebel/repository/AnimalsRepositoryImplTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,15 +23,15 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="feature/HW-3" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -61,16 +67,18 @@
       <recent name="ru.mts.siebel.repository" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ru.mts.siebel.Main" />
+  <component name="RunManager" selected="JUnit.AnimalsRepositoryImplTest">
+    <configuration name="AnimalsRepositoryImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mts-homework-SSMironova" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ru.mts.siebel.*" />
+          <option name="PATTERN" value="ru.mts.siebel.repository.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="ru.mts.siebel.repository" />
+      <option name="MAIN_CLASS_NAME" value="ru.mts.siebel.repository.AnimalsRepositoryImplTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -90,6 +98,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AnimalsRepositoryImplTest.findAverageAge" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mts-homework-SSMironova" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.mts.siebel.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.mts.siebel.repository" />
+      <option name="MAIN_CLASS_NAME" value="ru.mts.siebel.repository.AnimalsRepositoryImplTest" />
+      <option name="METHOD_NAME" value="findAverageAge" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AnimalsRepositoryImplTest.findLeapYearNames" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mts-homework-SSMironova" />
       <extension name="coverage">
@@ -101,6 +125,38 @@
       <option name="PACKAGE_NAME" value="ru.mts.siebel.repository" />
       <option name="MAIN_CLASS_NAME" value="ru.mts.siebel.repository.AnimalsRepositoryImplTest" />
       <option name="METHOD_NAME" value="findLeapYearNames" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AnimalsRepositoryImplTest.findMinConstAnimals" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mts-homework-SSMironova" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.mts.siebel.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.mts.siebel.repository" />
+      <option name="MAIN_CLASS_NAME" value="ru.mts.siebel.repository.AnimalsRepositoryImplTest" />
+      <option name="METHOD_NAME" value="findMinConstAnimals" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AnimalsRepositoryImplTest.findOldAndExpensive" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mts-homework-SSMironova" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.mts.siebel.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.mts.siebel.repository" />
+      <option name="MAIN_CLASS_NAME" value="ru.mts.siebel.repository.AnimalsRepositoryImplTest" />
+      <option name="METHOD_NAME" value="findOldAndExpensive" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -139,10 +195,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.AnimalsRepositoryImplTest" />
-        <item itemvalue="JUnit.AnimalsRepositoryImplTest.findOlderAnimal" />
-        <item itemvalue="JUnit.AnimalsRepositoryImplTest.findLeapYearNames" />
+        <item itemvalue="JUnit.AnimalsRepositoryImplTest.findMinConstAnimals" />
+        <item itemvalue="JUnit.AnimalsRepositoryImplTest.findOldAndExpensive" />
+        <item itemvalue="JUnit.AnimalsRepositoryImplTest.findAverageAge" />
         <item itemvalue="JUnit.SearchServiceImplTest" />
       </list>
     </recent_temporary>
