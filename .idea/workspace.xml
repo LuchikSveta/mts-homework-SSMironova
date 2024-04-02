@@ -6,13 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="58111045-0b5a-494a-86a2-faae078778d6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mts/siebel/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mts/siebel/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mts/siebel/api/repository/IAnimal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mts/siebel/api/repository/IAnimal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mts/siebel/api/repository/IAnimalsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mts/siebel/api/repository/IAnimalsRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mts/siebel/api/service/ICreateAnimalService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mts/siebel/api/service/ICreateAnimalService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/mts/siebel/repository/AnimalsRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mts/siebel/repository/AnimalsRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mts/siebel/service/CreateAnimalServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mts/siebel/service/CreateAnimalServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/mts/siebel/repository/AnimalsRepositoryImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/mts/siebel/repository/AnimalsRepositoryImplTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -247,13 +241,21 @@
       <option name="project" value="LOCAL" />
       <updated>1711983438223</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="HW-4: реализация новых методов для репозитория, добавление Unit тестов">
+      <created>1712047270742</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1712047270742</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Создание проект" />
     <MESSAGE value="HW-2: правки" />
     <MESSAGE value="HW-3: реализация репозитория животных, новых методов для репозитория" />
-    <option name="LAST_COMMIT_MESSAGE" value="HW-3: реализация репозитория животных, новых методов для репозитория" />
+    <MESSAGE value="HW-4: реализация новых методов для репозитория, добавление Unit тестов" />
+    <option name="LAST_COMMIT_MESSAGE" value="HW-4: реализация новых методов для репозитория, добавление Unit тестов" />
   </component>
 </project>
