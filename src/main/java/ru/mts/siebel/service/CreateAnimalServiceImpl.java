@@ -23,9 +23,9 @@ public class CreateAnimalServiceImpl implements ICreateAnimalService {
         int number = 1;
         Map<String, List<IAnimal>> animals = new HashMap<>();
         do {
-            AbstractAnimal animal = getAnimal(number, "Animal" + number, 1000 * number, "Character" + number);
+            AbstractAnimal animal = getAnimal(number, 1000 * number, "Character" + number);
             searchService.checkLeapYearAnimal(animal);
-            String animalType = animal.getClass().getSimpleName();
+            String animalType = animal.getClassName();
             animals.computeIfAbsent(animalType, k -> new ArrayList<>());
             animals.get(animalType).add(animal);
             System.out.println(animal);
@@ -38,9 +38,9 @@ public class CreateAnimalServiceImpl implements ICreateAnimalService {
         ISearchService searchService = new SearchServiceImpl();
         Map<String, List<IAnimal>> animals = new HashMap<>();
         for (int i = 1; i < number + 1; i++) {
-            AbstractAnimal animal = getAnimal(i, "Animal" + i, 1000 * i, "Character" + i);
+            AbstractAnimal animal = getAnimal(i, 1000 * i, "Character" + i);
             searchService.checkLeapYearAnimal(animal);
-            String animalType = animal.getClass().getSimpleName();
+            String animalType = animal.getClassName();
             animals.computeIfAbsent(animalType, k -> new ArrayList<>());
             animals.get(animalType).add(animal);
             System.out.println(animal);
@@ -49,8 +49,8 @@ public class CreateAnimalServiceImpl implements ICreateAnimalService {
     }
 
     @Override
-    public AbstractAnimal getAnimal(final int n, final String name, final double cost, final String character) {
-        return ICreateAnimalService.super.getAnimal(n, name, cost, character);
+    public AbstractAnimal getAnimal(final int n, final double cost, final String character) {
+        return ICreateAnimalService.super.getAnimal(n, cost, character);
     }
 
 }

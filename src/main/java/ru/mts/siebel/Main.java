@@ -18,7 +18,7 @@ public class Main {
             IAnimalsRepository animalsRepository = new AnimalsRepositoryImpl();
             Map<String, List<IAnimal>> animals = createAnimalService.createAnimal(6);
             animalsRepository.setAnimalsFromMap(animals);
-            System.out.println(animals);
+            System.out.println("\nВсе животные:\n" + animals);
 
             Map<String, LocalDate> animalsLeapYear = animalsRepository.findLeapYearNames();
             if (animalsLeapYear.size() == 0) {
@@ -26,8 +26,22 @@ public class Main {
             } else {
                 System.out.println("\nЖивотные, которые родились в високосный год:\n" + animalsLeapYear);
             }
-            System.out.println("\nЖивотные, возраст которых старше 5 лет:\n" + animalsRepository.findOlderAnimal(5));
-            System.out.println("\nКоличество дубликатов животных:\n" + animalsRepository.findDuplicate());
+
+            int n = 5;
+            System.out.println("\nЖивотные, возраст которых старше " + n + " лет:\n" + animalsRepository.findOlderAnimal(n));
+
+            System.out.println("\nДубликаты животных:\n" + animalsRepository.findDuplicate());
+
+            System.out.println("\nCредний возраст всех животных: " + animalsRepository.findAverageAge());
+
+            List<IAnimal> animalsOldAndExpensive = animalsRepository.findOldAndExpensive();
+            if (animalsOldAndExpensive.size() == 0) {
+                System.out.println("\nНет таких животных, возраст которых больше 5 лет и стоимость которых больше средней стоимости всех животных\n");
+            } else {
+                System.out.println("\nЖивотные, возраст которых больше 5 лет и стоимость которых больше средней стоимости всех животных:\n" + animalsOldAndExpensive);
+            }
+
+            System.out.println("\n3 животных с самой низкой ценой: \n" + animalsRepository.findMinCostAnimals());
         } catch (final InvalidAnimalBirthDateException e) {
             throw new RuntimeException("При вызове метода произошла ошибка\n" + e);
         }

@@ -18,9 +18,9 @@ public interface ICreateAnimalService {
         int number = 0;
         Map<String, List<IAnimal>> animals = new HashMap<>();
         while (number++ < 10) {
-            AbstractAnimal animal = getAnimal(number, "Animal" + number, 1000, "Character" + number);
+            AbstractAnimal animal = getAnimal(number, 1000, "Character" + number);
             searchService.checkLeapYearAnimal(animal);
-            String animalType = animal.getClass().getSimpleName();
+            String animalType = animal.getClassName();
             animals.computeIfAbsent(animalType, k -> new ArrayList<>());
             animals.get(animalType).add(animal);
             System.out.println(animal);
@@ -28,21 +28,22 @@ public interface ICreateAnimalService {
         return animals;
     }
     
-    default AbstractAnimal getAnimal(final int num, final String name, double cost, final String character) {
-        int n = 1 + (int)(Math.random() * 5);
+    default AbstractAnimal getAnimal(final int num, double cost, final String character) {
+        int n = (int)(Math.random() * 5);
+        String[] name = new String[] { "Мурзик", "Печенька", "Белый клык", "Свитти", "Марсик" };
         String birthDate = RandomDateUtil.createRandomDate(2010, 2024).toString();
         cost *= (num + n);
         switch (n) {
+            case 0:
+                return new Cat(name[n] + n, "Cat" + num, cost, character, birthDate);
             case 1:
-                return new Cat(name, "Cat" + num, cost, character, birthDate);
+                return new Dog(name[n] + n, "Dog" + num, cost, character, birthDate);
             case 2:
-                return new Dog(name, "Dog" + num, cost, character, birthDate);
+                return new Mouse(name[n] + n, "Mouse" + num, cost, character, birthDate);
             case 3:
-                return new Mouse(name, "Mouse" + num, cost, character, birthDate);
+                return new Shark(name[n] + n, "Shark" + num, cost, character, birthDate);
             case 4:
-                return new Shark(name, "Shark" + num, cost, character, birthDate);
-            case 5:
-                return new Wolf(name, "Wolf" + num, cost, character, birthDate);
+                return new Wolf(name[n] + n, "Wolf" + num, cost, character, birthDate);
             default:
                 return null;
         }

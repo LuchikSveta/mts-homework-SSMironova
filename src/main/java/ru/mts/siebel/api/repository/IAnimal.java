@@ -14,4 +14,12 @@ public interface IAnimal {
 
     LocalDate getBirthDate();
 
+    String getClassName();
+
+    String getClassAndName();
+
+    String getBirthDateFormat();
+
+    int getAge();
+
 }
