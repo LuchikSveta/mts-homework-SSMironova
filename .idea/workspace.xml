@@ -4,18 +4,68 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="58111045-0b5a-494a-86a2-faae078778d6" name="Changes" comment="">
+    <list default="true" id="58111045-0b5a-494a-86a2-faae078778d6" name="Changes" comment="HW-5: Многопоточность">
+      <change afterPath="$PROJECT_DIR$/animals/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/animals/src/main/java/ru/mts/siebel/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/animals/src/main/java/ru/mts/siebel/api/repository/IAnimal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/animals/src/main/java/ru/mts/siebel/api/repository/IAnimalsRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/animals/src/main/java/ru/mts/siebel/api/service/ICreateAnimalService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/animals/src/main/java/ru/mts/siebel/api/service/ISearchService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/animals/src/main/java/ru/mts/siebel/exception/EmptyAnimalsException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/animals/src/main/java/ru/mts/siebel/exception/InvalidAnimalBirthDateException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/animals/src/main/java/ru/mts/siebel/exception/InvalidAnimalException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/animals/src/main/java/ru/mts/siebel/exception/InvalidAverageAgeException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/animals/src/main/java/ru/mts/siebel/exception/InvalidAverageCostException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/animals/src/main/java/ru/mts/siebel/exception/InvalidMaxAgeException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/animals/src/main/java/ru/mts/siebel/model/AbstractAnimal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/animals/src/main/java/ru/mts/siebel/model/Cat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/animals/src/main/java/ru/mts/siebel/model/Dog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/animals/src/main/java/ru/mts/siebel/model/Mouse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/animals/src/main/java/ru/mts/siebel/model/Pet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/animals/src/main/java/ru/mts/siebel/model/Predator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/animals/src/main/java/ru/mts/siebel/model/Shark.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/animals/src/main/java/ru/mts/siebel/model/Wolf.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/animals/src/main/java/ru/mts/siebel/repository/AnimalsRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/animals/src/main/java/ru/mts/siebel/service/CreateAnimalServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/animals/src/main/java/ru/mts/siebel/service/SearchServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/animals/src/main/java/ru/mts/siebel/util/RandomDateUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/animals/src/test/java/ru/mts/siebel/repository/AnimalsRepositoryImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/animals/src/test/java/ru/mts/siebel/service/SearchServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/threads/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/threads/src/main/java/Counter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/threads/src/main/java/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/threads/src/main/java/MyCounter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/threads/src/main/java/MyFactorial.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/threads/src/main/java/MyFactorialTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/threads/src/main/java/MySimpleMethod.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/threads/src/main/java/MySimpleTask.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mts/siebel/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mts/siebel/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mts/siebel/api/repository/IAnimal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mts/siebel/api/repository/IAnimal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mts/siebel/api/repository/IAnimalsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mts/siebel/api/repository/IAnimalsRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mts/siebel/api/service/ICreateAnimalService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mts/siebel/api/service/ICreateAnimalService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mts/siebel/model/AbstractAnimal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mts/siebel/model/AbstractAnimal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mts/siebel/repository/AnimalsRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mts/siebel/repository/AnimalsRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mts/siebel/service/CreateAnimalServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mts/siebel/service/CreateAnimalServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mts/siebel/service/SearchServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mts/siebel/service/SearchServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/mts/siebel/repository/AnimalsRepositoryImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/mts/siebel/repository/AnimalsRepositoryImplTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/mts/siebel/service/SearchServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/mts/siebel/service/SearchServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mts/siebel/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mts/siebel/api/repository/IAnimal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mts/siebel/api/repository/IAnimalsRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mts/siebel/api/service/ICreateAnimalService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mts/siebel/api/service/ISearchService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mts/siebel/exception/EmptyAnimalsException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mts/siebel/exception/InvalidAnimalBirthDateException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mts/siebel/exception/InvalidAnimalException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mts/siebel/exception/InvalidAverageAgeException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mts/siebel/exception/InvalidAverageCostException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mts/siebel/exception/InvalidMaxAgeException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mts/siebel/model/AbstractAnimal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mts/siebel/model/Cat.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mts/siebel/model/Dog.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mts/siebel/model/Mouse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mts/siebel/model/Pet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mts/siebel/model/Predator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mts/siebel/model/Shark.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mts/siebel/model/Wolf.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mts/siebel/repository/AnimalsRepositoryImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mts/siebel/service/CreateAnimalServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mts/siebel/service/SearchServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mts/siebel/util/RandomDateUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/mts/siebel/repository/AnimalsRepositoryImplTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/mts/siebel/service/SearchServiceImplTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,8 +75,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="JUnit5 Test Class" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -34,7 +84,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="feature/HW-3" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -53,15 +103,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "jdk.selected.JAVA_MODULE": "liberica-11",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -70,10 +124,30 @@
       <recent name="ru.mts.siebel.repository" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.Main (1)">
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="threads" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.mts.siebel.Main" />
       <module name="mts-homework-SSMironova" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.mts.siebel.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ru.mts.siebel.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ru.mts.siebel.Main" />
+      <module name="animals" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="ru.mts.siebel.*" />
@@ -99,85 +173,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AnimalsRepositoryImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="mts-homework-SSMironova" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.mts.siebel.repository.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.mts.siebel.repository" />
-      <option name="MAIN_CLASS_NAME" value="ru.mts.siebel.repository.AnimalsRepositoryImplTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AnimalsRepositoryImplTest.findAverageAge" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="mts-homework-SSMironova" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.mts.siebel.repository.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.mts.siebel.repository" />
-      <option name="MAIN_CLASS_NAME" value="ru.mts.siebel.repository.AnimalsRepositoryImplTest" />
-      <option name="METHOD_NAME" value="findAverageAge" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AnimalsRepositoryImplTest.findLeapYearNames" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="mts-homework-SSMironova" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.mts.siebel.repository.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.mts.siebel.repository" />
-      <option name="MAIN_CLASS_NAME" value="ru.mts.siebel.repository.AnimalsRepositoryImplTest" />
-      <option name="METHOD_NAME" value="findLeapYearNames" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AnimalsRepositoryImplTest.findMinConstAnimals" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="mts-homework-SSMironova" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.mts.siebel.repository.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.mts.siebel.repository" />
-      <option name="MAIN_CLASS_NAME" value="ru.mts.siebel.repository.AnimalsRepositoryImplTest" />
-      <option name="METHOD_NAME" value="findMinConstAnimals" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AnimalsRepositoryImplTest.findOldAndExpensive" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="mts-homework-SSMironova" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.mts.siebel.repository.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.mts.siebel.repository" />
-      <option name="MAIN_CLASS_NAME" value="ru.mts.siebel.repository.AnimalsRepositoryImplTest" />
-      <option name="METHOD_NAME" value="findOldAndExpensive" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="AnimalsRepositoryImplTest.findOlderAnimal" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mts-homework-SSMironova" />
       <extension name="coverage">
@@ -196,11 +191,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main (1)" />
+        <item itemvalue="Application.ru.mts.siebel.Main" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.AnimalsRepositoryImplTest" />
-        <item itemvalue="JUnit.AnimalsRepositoryImplTest.findMinConstAnimals" />
-        <item itemvalue="JUnit.AnimalsRepositoryImplTest.findOldAndExpensive" />
-        <item itemvalue="JUnit.AnimalsRepositoryImplTest.findAverageAge" />
+        <item itemvalue="JUnit.AnimalsRepositoryImplTest.findOlderAnimal" />
       </list>
     </recent_temporary>
   </component>
@@ -248,39 +243,14 @@
       <option name="project" value="LOCAL" />
       <updated>1711983438223</updated>
     </task>
-    <task id="LOCAL-00006" summary="HW-4: реализация новых методов для репозитория, добавление Unit тестов">
-      <created>1712047270742</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1712047270742</updated>
-    </task>
-    <task id="LOCAL-00007" summary="HW-4: реализация новых методов для репозитория, добавление Unit тестов">
-      <created>1712047733040</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1712047733040</updated>
-    </task>
-    <option name="localTasksCounter" value="8" />
+    <option name="localTasksCounter" value="6" />
     <servers />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Создание проект" />
     <MESSAGE value="HW-2: правки" />
     <MESSAGE value="HW-3: реализация репозитория животных, новых методов для репозитория" />
-    <MESSAGE value="HW-4: реализация новых методов для репозитория, добавление Unit тестов" />
-    <option name="LAST_COMMIT_MESSAGE" value="HW-4: реализация новых методов для репозитория, добавление Unit тестов" />
+    <MESSAGE value="HW-5: Многопоточность" />
+    <option name="LAST_COMMIT_MESSAGE" value="HW-5: Многопоточность" />
   </component>
 </project>
