@@ -1,3 +1,7 @@
+package service;
+
+import model.FactorialTask;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
@@ -5,7 +9,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
-public interface MyFactorial {
+public interface FactorialMethod {
 
     static void calculate(final int n, final int threadNum) throws ExecutionException, InterruptedException {
         Integer[] list = new Integer[n];
@@ -19,7 +23,7 @@ public interface MyFactorial {
         for(int i = 0; i < threadNum; i++){
             int startIndex = i * chunkSize;
             int endIndex = (i == threadNum - 1) ? n : startIndex + chunkSize;
-            futures.add(executor.submit(new MyFactorialTask(list, startIndex, endIndex)));
+            futures.add(executor.submit(new FactorialTask(list, startIndex, endIndex)));
         }
 
         int answer = 1;

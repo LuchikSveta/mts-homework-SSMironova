@@ -1,10 +1,14 @@
+package service;
+
+import model.CounterEntity;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public interface MyCounter {
+public interface CounterMethod {
 
     static void calculate(final int n, final int threadNum) throws InterruptedException {
-        Counter counter = new Counter();
+        CounterEntity counter = new CounterEntity();
         List<Thread> threads = new ArrayList<>();
         for (int i = 0; i < threadNum; i++) {
             var thread = new Thread(() -> {

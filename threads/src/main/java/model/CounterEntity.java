@@ -1,10 +1,12 @@
+package model;
+
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class Counter {
+public class CounterEntity {
 
     private final AtomicInteger count;
 
-    public Counter() {
+    public CounterEntity() {
         this.count = new AtomicInteger(0);
     }
 

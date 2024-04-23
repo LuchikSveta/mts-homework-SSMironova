@@ -1,15 +1,17 @@
+package model;
+
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.Callable;
 
-public class MySimpleTask implements Callable<List<Integer>> {
+public class SimpleTask implements Callable<List<Integer>> {
 
     private final Integer[] array;
     private final int start;
     private final int end;
 
-    public MySimpleTask(final Integer[] array, final int start, final int end) {
+    public SimpleTask(final Integer[] array, final int start, final int end) {
         this.array = array;
         this.start = start;
         this.end = end;
