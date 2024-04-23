@@ -10,7 +10,7 @@ import java.time.LocalDate;
 import java.util.List;
 import java.util.Map;
 
-public class Main {
+public class AnimalApplication {
 
     public static void main(String[] args) {
         CreateAnimalServiceImpl createAnimalService = new CreateAnimalServiceImpl();

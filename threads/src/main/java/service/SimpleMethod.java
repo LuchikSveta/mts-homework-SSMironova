@@ -1,3 +1,7 @@
+package service;
+
+import model.SimpleTask;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -7,7 +11,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
-public interface MySimpleMethod {
+public interface SimpleMethod {
 
     static void calculate(final int n, final int threadNum, final int maxValue) throws ExecutionException, InterruptedException {
         Integer[] list = new Integer[n];
@@ -21,7 +25,7 @@ public interface MySimpleMethod {
         for(int i = 0; i < threadNum; i++){
             int startIndex = i * chunkSize;
             int endIndex = (i == threadNum - 1) ? n : startIndex + chunkSize;
-            futures.add(executor.submit(new MySimpleTask(list, startIndex, endIndex)));
+            futures.add(executor.submit(new SimpleTask(list, startIndex, endIndex)));
         }
 
         List<Integer> answer = new ArrayList<>();
