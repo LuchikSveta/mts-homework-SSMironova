@@ -1,12 +1,14 @@
-package ru.mts.siebel.api.repository;
+package ru.mts.siebel.api.model;
 
 import java.time.LocalDate;
 
 public interface IAnimal {
 
-    String getBreed();
+    String getType();
 
     String getName();
+
+    String getBreed();
 
     Double getCost();
 
@@ -14,11 +16,11 @@ public interface IAnimal {
 
     LocalDate getBirthDate();
 
-    String getClassName();
-
-    String getClassAndName();
-
     String getBirthDateFormat();
+
+    String getSecretInformation();
+
+    String getTypeAndName();
 
     int getAge();
 

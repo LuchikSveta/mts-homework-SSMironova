@@ -1,5 +1,7 @@
 package ru.mts.siebel.api.repository;
 
+import ru.mts.siebel.api.model.IAnimal;
+
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Map;
