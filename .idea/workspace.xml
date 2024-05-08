@@ -6,17 +6,23 @@
   <component name="ChangeListManager">
     <list default="true" id="58111045-0b5a-494a-86a2-faae078778d6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/animals/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/animals/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/animals/src/main/java/ru/mts/siebel/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/animals/src/main/java/ru/mts/siebel/AnimalApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/animals/src/main/java/ru/mts/siebel/AnimalApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/animals/src/main/java/ru/mts/siebel/AnimalApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/animals/src/main/java/ru/mts/siebel/api/repository/IAnimal.java" beforeDir="false" afterPath="$PROJECT_DIR$/animals/src/main/java/ru/mts/siebel/api/model/IAnimal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/animals/src/main/java/ru/mts/siebel/api/repository/IAnimalsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/animals/src/main/java/ru/mts/siebel/api/repository/IAnimalsRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/animals/src/main/java/ru/mts/siebel/api/service/ICreateAnimalService.java" beforeDir="false" afterPath="$PROJECT_DIR$/animals/src/main/java/ru/mts/siebel/api/service/ICreateAnimalService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/animals/src/main/java/ru/mts/siebel/model/AbstractAnimal.java" beforeDir="false" afterPath="$PROJECT_DIR$/animals/src/main/java/ru/mts/siebel/model/AbstractAnimal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/animals/src/main/java/ru/mts/siebel/model/Cat.java" beforeDir="false" afterPath="$PROJECT_DIR$/animals/src/main/java/ru/mts/siebel/model/Cat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/animals/src/main/java/ru/mts/siebel/model/Dog.java" beforeDir="false" afterPath="$PROJECT_DIR$/animals/src/main/java/ru/mts/siebel/model/Dog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/animals/src/main/java/ru/mts/siebel/model/Mouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/animals/src/main/java/ru/mts/siebel/model/Mouse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/animals/src/main/java/ru/mts/siebel/model/Pet.java" beforeDir="false" afterPath="$PROJECT_DIR$/animals/src/main/java/ru/mts/siebel/model/Pet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/animals/src/main/java/ru/mts/siebel/model/Predator.java" beforeDir="false" afterPath="$PROJECT_DIR$/animals/src/main/java/ru/mts/siebel/model/Predator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/animals/src/main/java/ru/mts/siebel/model/Shark.java" beforeDir="false" afterPath="$PROJECT_DIR$/animals/src/main/java/ru/mts/siebel/model/Shark.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/animals/src/main/java/ru/mts/siebel/model/Wolf.java" beforeDir="false" afterPath="$PROJECT_DIR$/animals/src/main/java/ru/mts/siebel/model/Wolf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/animals/src/main/java/ru/mts/siebel/repository/AnimalsRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/animals/src/main/java/ru/mts/siebel/repository/AnimalsRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/animals/src/main/java/ru/mts/siebel/service/CreateAnimalServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/animals/src/main/java/ru/mts/siebel/service/CreateAnimalServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/animals/src/main/java/ru/mts/siebel/service/SearchServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/animals/src/main/java/ru/mts/siebel/service/SearchServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/animals/src/test/java/ru/mts/siebel/repository/AnimalsRepositoryImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/animals/src/test/java/ru/mts/siebel/repository/AnimalsRepositoryImplTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/threads/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/threads/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/threads/src/main/java/Counter.java" beforeDir="false" afterPath="$PROJECT_DIR$/threads/src/main/java/model/CounterEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/threads/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/threads/src/main/java/ThreadApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/threads/src/main/java/MyCounter.java" beforeDir="false" afterPath="$PROJECT_DIR$/threads/src/main/java/service/CounterMethod.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/threads/src/main/java/MyFactorial.java" beforeDir="false" afterPath="$PROJECT_DIR$/threads/src/main/java/service/FactorialMethod.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/threads/src/main/java/MyFactorialTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/threads/src/main/java/model/FactorialTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/threads/src/main/java/MySimpleMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/threads/src/main/java/service/SimpleMethod.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/threads/src/main/java/MySimpleTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/threads/src/main/java/model/SimpleTask.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +41,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="feature/HW-3" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -45,6 +51,9 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2e8qW1IiEkgRJnlJ35kFh05DI0f" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -75,7 +84,7 @@
       <recent name="ru.mts.siebel.repository" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ThreadApplication">
+  <component name="RunManager" selected="Application.AnimalApplication">
     <configuration name="AnimalApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.mts.siebel.AnimalApplication" />
       <module name="animals" />
@@ -142,9 +151,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ThreadApplication" />
         <item itemvalue="Application.AnimalApplication" />
         <item itemvalue="Application.ru.mts.siebel.Main" />
+        <item itemvalue="Application.ThreadApplication" />
         <item itemvalue="JUnit.AnimalsRepositoryImplTest" />
         <item itemvalue="JUnit.AnimalsRepositoryImplTest.findOlderAnimal" />
       </list>

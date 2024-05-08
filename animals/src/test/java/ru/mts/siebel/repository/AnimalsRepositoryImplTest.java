@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
-import ru.mts.siebel.api.repository.IAnimal;
+import ru.mts.siebel.api.model.IAnimal;
 import ru.mts.siebel.api.repository.IAnimalsRepository;
 import ru.mts.siebel.exception.EmptyAnimalsException;
 import ru.mts.siebel.model.*;

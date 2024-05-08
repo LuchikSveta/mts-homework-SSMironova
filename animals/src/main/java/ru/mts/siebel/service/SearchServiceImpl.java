@@ -13,7 +13,7 @@ public class SearchServiceImpl implements ISearchService {
             throw new InvalidAnimalException();
         }
         if (animal.getBirthDate() == null) {
-            throw new InvalidAnimalBirthDateException("У животного " + animal.getClassName().toUpperCase() + " не указана дата его рождения");
+            throw new InvalidAnimalBirthDateException("У животного " + animal.getType().toUpperCase() + " не указана дата его рождения");
         }
         if (animal.getBirthDate().isLeapYear()) {
             System.out.println(animal.getName().toUpperCase() + " был рожден в високосный год");

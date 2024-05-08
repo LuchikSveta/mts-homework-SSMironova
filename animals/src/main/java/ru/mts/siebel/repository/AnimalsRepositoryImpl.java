@@ -1,7 +1,8 @@
 package ru.mts.siebel.repository;
 
-import ru.mts.siebel.api.repository.IAnimal;
+import ru.mts.siebel.api.model.IAnimal;
 import ru.mts.siebel.api.repository.IAnimalsRepository;
+import ru.mts.siebel.api.service.IAnimalFileService;
 import ru.mts.siebel.exception.EmptyAnimalsException;
 import ru.mts.siebel.exception.InvalidAverageAgeException;
 import ru.mts.siebel.exception.InvalidAverageCostException;
@@ -44,7 +45,7 @@ public class AnimalsRepositoryImpl implements IAnimalsRepository {
         }
         return animals.stream()
                 .filter(animal -> animal.getBirthDate().isLeapYear())
-                .collect(Collectors.toMap(IAnimal::getClassAndName, IAnimal::getBirthDate));
+                .collect(Collectors.toMap(IAnimal::getTypeAndName, IAnimal::getBirthDate));
     }
 
     @Override
@@ -64,6 +65,7 @@ public class AnimalsRepositoryImpl implements IAnimalsRepository {
                     .filter(animal -> animal.getAge() >= maxAge)
                     .collect(Collectors.toMap(animal -> animal, IAnimal::getAge));
         }
+        IAnimalFileService.writeAnimalsToJson(animalsOlderN);
         return animalsOlderN;
     }
 
@@ -73,7 +75,7 @@ public class AnimalsRepositoryImpl implements IAnimalsRepository {
             throw new EmptyAnimalsException();
         }
         return animals.stream()
-                .collect(Collectors.groupingBy(IAnimal::getClassName));
+                .collect(Collectors.groupingBy(IAnimal::getType));
     }
 
     @Override
