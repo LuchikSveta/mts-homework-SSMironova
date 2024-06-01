@@ -4,52 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="58111045-0b5a-494a-86a2-faae078778d6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/animals/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/animals/src/main/java/ru/mts/siebel/AnimalApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/animals/src/main/java/ru/mts/siebel/api/model/IAnimal.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/animals/src/main/java/ru/mts/siebel/api/repository/IAnimalsRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/animals/src/main/java/ru/mts/siebel/api/service/IAnimalFileService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/animals/src/main/java/ru/mts/siebel/api/service/ICreateAnimalService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/animals/src/main/java/ru/mts/siebel/api/service/ISearchService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/animals/src/main/java/ru/mts/siebel/exception/EmptyAnimalsException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/animals/src/main/java/ru/mts/siebel/exception/InvalidAnimalBirthDateException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/animals/src/main/java/ru/mts/siebel/exception/InvalidAnimalException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/animals/src/main/java/ru/mts/siebel/exception/InvalidAverageAgeException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/animals/src/main/java/ru/mts/siebel/exception/InvalidAverageCostException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/animals/src/main/java/ru/mts/siebel/exception/InvalidMaxAgeException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/animals/src/main/java/ru/mts/siebel/model/AbstractAnimal.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/animals/src/main/java/ru/mts/siebel/model/Cat.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/animals/src/main/java/ru/mts/siebel/model/Dog.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/animals/src/main/java/ru/mts/siebel/model/Mouse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/animals/src/main/java/ru/mts/siebel/model/Pet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/animals/src/main/java/ru/mts/siebel/model/Predator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/animals/src/main/java/ru/mts/siebel/model/Shark.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/animals/src/main/java/ru/mts/siebel/model/Wolf.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/animals/src/main/java/ru/mts/siebel/repository/AnimalsRepositoryImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/animals/src/main/java/ru/mts/siebel/serializer/OlderAnimalDeserializer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/animals/src/main/java/ru/mts/siebel/serializer/OlderAnimalSerializer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/animals/src/main/java/ru/mts/siebel/service/CreateAnimalServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/animals/src/main/java/ru/mts/siebel/service/ResultReader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/animals/src/main/java/ru/mts/siebel/service/SearchServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/animals/src/main/java/ru/mts/siebel/util/RandomDateUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/animals/src/main/resources/animals/logData.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/animals/src/main/resources/results/findOlderAnimals.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/animals/src/main/resources/secretStore/secretInformation.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/animals/src/test/java/ru/mts/siebel/repository/AnimalsRepositoryImplTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/animals/src/test/java/ru/mts/siebel/service/SearchServiceImplTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/threads/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/threads/src/main/java/ThreadApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/threads/src/main/java/model/CounterEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/threads/src/main/java/model/FactorialTask.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/threads/src/main/java/model/SimpleTask.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/threads/src/main/java/service/CounterMethod.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/threads/src/main/java/service/FactorialMethod.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/threads/src/main/java/service/SimpleMethod.java" beforeDir="false" />
-    </list>
+    <list default="true" id="58111045-0b5a-494a-86a2-faae078778d6" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -103,7 +58,7 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "jdk.selected.JAVA_MODULE": "liberica-11",
-    "last_opened_file_path": "C:/Users/svetl/IdeaProjects/mts-homework-SSMironova/javacore/pom.xml",
+    "last_opened_file_path": "C:/Users/svetl/IdeaProjects/mts-homework-SSMironova/spring",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -244,7 +199,14 @@
       <option name="project" value="LOCAL" />
       <updated>1712588313492</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="HW-7: Java Core">
+      <created>1717244136997</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1717244136997</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -252,6 +214,7 @@
     <MESSAGE value="HW-2: правки" />
     <MESSAGE value="HW-3: реализация репозитория животных, новых методов для репозитория" />
     <MESSAGE value="HW-5: Многопоточность" />
-    <option name="LAST_COMMIT_MESSAGE" value="HW-5: Многопоточность" />
+    <MESSAGE value="HW-7: Java Core" />
+    <option name="LAST_COMMIT_MESSAGE" value="HW-7: Java Core" />
   </component>
 </project>
