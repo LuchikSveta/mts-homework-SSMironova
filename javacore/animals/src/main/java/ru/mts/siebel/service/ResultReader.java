@@ -23,7 +23,7 @@ public class ResultReader {
 
         List<OlderAnimalDeserializer> animalDeserializerList;
 
-        Path path = Paths.get("C:\\Users\\svetl\\IdeaProjects\\mts-homework-SSMironova\\animals\\src\\main\\resources\\results\\findOlderAnimals.json");
+        Path path = Paths.get("C:\\Users\\svetl\\IdeaProjects\\mts-homework-SSMironova\\javacore\\animals\\src\\main\\resources\\results\\findOlderAnimals.json");
         try {
             animalDeserializerList = mapper.readValue(path.toFile(), new TypeReference<>() {});
         } catch (IOException e) {
@@ -57,7 +57,7 @@ public class ResultReader {
     }
 
     public void countLogDataFileLines() {
-        Path path = Paths.get("C:\\Users\\svetl\\IdeaProjects\\mts-homework-SSMironova\\animals\\src\\main\\resources\\animals\\logData.txt");
+        Path path = Paths.get("C:\\Users\\svetl\\IdeaProjects\\mts-homework-SSMironova\\javacore\\animals\\src\\main\\resources\\animals\\logData.txt");
         try {
             System.out.println("\nКоличество строк в файле logData = " + Files.readAllLines(path).size());
         } catch (IOException e) {

@@ -15,7 +15,7 @@ import java.util.stream.Stream;
 public interface IAnimalFileService {
 
     private static void createResourcesDirectory() {
-        Path path = Paths.get("C:\\Users\\svetl\\IdeaProjects\\mts-homework-SSMironova\\animals\\src\\main\\resources");
+        Path path = Paths.get("C:\\Users\\svetl\\IdeaProjects\\mts-homework-SSMironova\\javacore\\animals\\src\\main\\resources");
         try {
             if (!Files.exists(path)) {
                 Files.createDirectory(path);
@@ -49,9 +49,9 @@ public interface IAnimalFileService {
 
     static void clearFile() {
         List<String> filePaths = new ArrayList<>(List.of(
-                "C:\\Users\\svetl\\IdeaProjects\\mts-homework-SSMironova\\animals\\src\\main\\resources\\secretStore\\secretInformation.txt",
-                "C:\\Users\\svetl\\IdeaProjects\\mts-homework-SSMironova\\animals\\src\\main\\resources\\animals\\logData.txt",
-                "C:\\Users\\svetl\\IdeaProjects\\mts-homework-SSMironova\\animals\\src\\main\\resources\\results\\findOlderAnimals.json"
+                "C:\\Users\\svetl\\IdeaProjects\\mts-homework-SSMironova\\javacore\\animals\\src\\main\\resources\\secretStore\\secretInformation.txt",
+                "C:\\Users\\svetl\\IdeaProjects\\mts-homework-SSMironova\\javacore\\animals\\src\\main\\resources\\animals\\logData.txt",
+                "C:\\Users\\svetl\\IdeaProjects\\mts-homework-SSMironova\\javacore\\animals\\src\\main\\resources\\results\\findOlderAnimals.json"
         ));
         for (String filePath : filePaths) {
             Path path = Paths.get(filePath);
@@ -64,8 +64,8 @@ public interface IAnimalFileService {
     }
 
     static void generateSecretInformation() {
-        String directoryPath = "C:\\Users\\svetl\\IdeaProjects\\mts-homework-SSMironova\\animals\\src\\main\\resources\\secretStore";
-        String filePath = "C:\\Users\\svetl\\IdeaProjects\\mts-homework-SSMironova\\animals\\src\\main\\resources\\secretStore\\secretInformation.txt";
+        String directoryPath = "C:\\Users\\svetl\\IdeaProjects\\mts-homework-SSMironova\\javacore\\animals\\src\\main\\resources\\secretStore";
+        String filePath = "C:\\Users\\svetl\\IdeaProjects\\mts-homework-SSMironova\\javacore\\animals\\src\\main\\resources\\secretStore\\secretInformation.txt";
 
         createResourcesDirectory();
         createDirectory(directoryPath);
@@ -83,8 +83,8 @@ public interface IAnimalFileService {
     }
 
     static void logAnimals(final int n, final IAnimal animal) {
-        String directoryPath = "C:\\Users\\svetl\\IdeaProjects\\mts-homework-SSMironova\\animals\\src\\main\\resources\\animals";
-        String filePath = "C:\\Users\\svetl\\IdeaProjects\\mts-homework-SSMironova\\animals\\src\\main\\resources\\animals\\logData.txt";
+        String directoryPath = "C:\\Users\\svetl\\IdeaProjects\\mts-homework-SSMironova\\javacore\\animals\\src\\main\\resources\\animals";
+        String filePath = "C:\\Users\\svetl\\IdeaProjects\\mts-homework-SSMironova\\javacore\\animals\\src\\main\\resources\\animals\\logData.txt";
 
         createResourcesDirectory();
         createDirectory(directoryPath);
@@ -98,8 +98,8 @@ public interface IAnimalFileService {
     }
 
     static String getSecretInformation() {
-        String directoryPath = "C:\\Users\\svetl\\IdeaProjects\\mts-homework-SSMironova\\animals\\src\\main\\resources\\secretStore";
-        String filePath = "C:\\Users\\svetl\\IdeaProjects\\mts-homework-SSMironova\\animals\\src\\main\\resources\\secretStore\\secretInformation.txt";
+        String directoryPath = "C:\\Users\\svetl\\IdeaProjects\\mts-homework-SSMironova\\javacore\\animals\\src\\main\\resources\\secretStore";
+        String filePath = "C:\\Users\\svetl\\IdeaProjects\\mts-homework-SSMironova\\javacore\\animals\\src\\main\\resources\\secretStore\\secretInformation.txt";
 
         createResourcesDirectory();
         createDirectory(directoryPath);
@@ -108,7 +108,7 @@ public interface IAnimalFileService {
         Path path = Paths.get(filePath);
         try {
             List<String> file = Files.readAllLines(path);
-            int n = (int)(Math.random() * (file.size() - 1));
+            int n = (int) (Math.random() * file.size());
             return file.get(n);
         } catch (IOException e) {
             throw new RuntimeException(e);
@@ -116,8 +116,8 @@ public interface IAnimalFileService {
     }
 
     static void writeAnimalsToJson(final Map<IAnimal, Integer> animals) {
-        String directoryPath = "C:\\Users\\svetl\\IdeaProjects\\mts-homework-SSMironova\\animals\\src\\main\\resources\\results";
-        String filePath = "C:\\Users\\svetl\\IdeaProjects\\mts-homework-SSMironova\\animals\\src\\main\\resources\\results\\findOlderAnimals.json";
+        String directoryPath = "C:\\Users\\svetl\\IdeaProjects\\mts-homework-SSMironova\\javacore\\animals\\src\\main\\resources\\results";
+        String filePath = "C:\\Users\\svetl\\IdeaProjects\\mts-homework-SSMironova\\javacore\\animals\\src\\main\\resources\\results\\findOlderAnimals.json";
 
         createResourcesDirectory();
         createDirectory(directoryPath);

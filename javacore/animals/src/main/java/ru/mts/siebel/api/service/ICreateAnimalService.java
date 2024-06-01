@@ -29,8 +29,8 @@ public interface ICreateAnimalService {
     }
     
     default AbstractAnimal getAnimal(final int num, double cost, final String character) {
-        int n = (int)(Math.random() * 5);
-        int randomNum = 1 + (int)(Math.random() * 100);
+        int n = (int) (Math.random() * 5);
+        int randomNum = 1 + (int) (Math.random() * 100);
         String[] name = new String[] { "Мурзик", "Печенька", "Белый клык", "Свитти", "Марсик" };
         String birthDate = RandomDateUtil.createRandomDate(2010, 2024).toString();
         cost *= (num + n);
