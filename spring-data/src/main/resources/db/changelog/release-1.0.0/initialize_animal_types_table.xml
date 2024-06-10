@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.4.xsd">
+
+    <changeSet author="SSMironova" id="create_animal_types_table">
+        <createTable tableName="animal_types" remarks="Таблица с видами животных" schemaName="animals">
+            <column name="id" type="bigint" remarks="Уникальный идентификатор записи" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="type" type="varchar(255)" remarks="Разновидность">
+                <constraints nullable="true"/>
+            </column>
+        </createTable>
+        <rollback>
+            <dropTable  cascadeConstraints="true"
+                        catalogName="education"
+                        schemaName="animals"
+                        tableName="animal_types"/>
+        </rollback>
+        <comment>
+            Первичная инициализация таблицы animal_types
+        </comment>
+
+        <loadData tableName="animal_types" file="db/changelog/data/init_animal_types_data.csv"/>
+    </changeSet>
+</databaseChangeLog>

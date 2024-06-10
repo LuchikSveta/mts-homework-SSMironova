@@ -1,0 +1,11 @@
+name,breed,character,cost,birth_date,type_id
+Marsik,Cat1,Character1,1500,'2023-03-08',1
+Sharik,Dog1,Character16,2500,'2022-06-12',2
+Gaechka,Mouse1,Character5,500,'2021-10-19',3
+Tuchka,Shark1,Character7,180000,'2020-12-25',4
+Alpha,Wolf1,Character8,120000,'2019-04-15',5
+Sweety,Cat2,Character10,1700,'2018-07-22',1
+Tuzik,Dog2,Character3,3000,'2017-11-09',2
+Nemo,Shark2,Character14,220000,'2016-02-16',4
+Barsik,Cat3,Character4,2400,'2015-05-23',1
+White Fang,Wolf2,Character1,260000,'2014-09-10',5

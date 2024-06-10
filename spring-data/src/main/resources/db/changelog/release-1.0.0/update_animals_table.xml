@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.4.xsd">
+
+    <changeSet author="SSMironova" id="update_animals_table">
+        <sql>
+            UPDATE animals.animals SET secret_information = encode('SECRET_INFORMATION1', 'base64') WHERE id = 1;
+            UPDATE animals.animals SET secret_information = encode('SECRET_INFORMATION12', 'base64') WHERE id = 2;
+            UPDATE animals.animals SET secret_information = encode('SECRET_INFORMATION7', 'base64') WHERE id = 3;
+            UPDATE animals.animals SET secret_information = encode('SECRET_INFORMATION17', 'base64') WHERE id = 4;
+            UPDATE animals.animals SET secret_information = encode('SECRET_INFORMATION5', 'base64') WHERE id = 5;
+            UPDATE animals.animals SET secret_information = encode('SECRET_INFORMATION9', 'base64') WHERE id = 6;
+            UPDATE animals.animals SET secret_information = encode('SECRET_INFORMATION13', 'base64') WHERE id = 7;
+            UPDATE animals.animals SET secret_information = encode('SECRET_INFORMATION10', 'base64') WHERE id = 8;
+            UPDATE animals.animals SET secret_information = encode('SECRET_INFORMATION3', 'base64') WHERE id = 9;
+            UPDATE animals.animals SET secret_information = encode('SECRET_INFORMATION4', 'base64') WHERE id = 10;
+        </sql>
+        <rollback>
+            DROP TABLE animals.animals;
+        </rollback>
+        <comment>
+            Обновление данных в таблице animals
+        </comment>
+    </changeSet>
+
+</databaseChangeLog>

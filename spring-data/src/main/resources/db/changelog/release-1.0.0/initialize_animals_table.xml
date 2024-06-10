@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.4.xsd">
+
+    <changeSet author="SSMironova" id="create_animals_table">
+        <createTable tableName="animals" remarks="Таблица с данными о животных" schemaName="animals">
+            <column name="id" type="bigint" remarks="Уникальный идентификатор записи" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="name" type="varchar(255)" remarks="Имя">
+                <constraints nullable="true"/>
+            </column>
+            <column name="breed" type="varchar(255)" remarks="Порода">
+                <constraints nullable="false"/>
+            </column>
+            <column name="cost" type="numeric(38, 2)" remarks="Цена в магазине">
+                <constraints nullable="false"/>
+            </column>
+            <column name="character" type="varchar(255)" remarks="Характер">
+                <constraints nullable="false"/>
+            </column>
+            <column name="birth_date" type="date" remarks="Дата рождения">
+                <constraints nullable="false"/>
+            </column>
+            <column name="secret_information" type="varchar(255)" remarks="Секретная информация">
+                <constraints nullable="true"/>
+            </column>
+            <column name="type_id" type="bigint" remarks="Id вида животного">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <addForeignKeyConstraint baseTableName="animals" baseColumnNames="type_id"
+                                 referencedTableName="animal_types" referencedColumnNames="id"
+                                 constraintName="fk_type_id"/>
+        <rollback>
+            <dropTable  cascadeConstraints="true"
+                        catalogName="education"
+                        schemaName="animals"
+                        tableName="animals"/>
+        </rollback>
+        <comment>
+            Первичная инициализация таблицы animals
+        </comment>
+
+        <loadData tableName="animals" file="db/changelog/data/init_animals_data.csv"/>
+    </changeSet>
+</databaseChangeLog>
