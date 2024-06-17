@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: animals
+
+animal:
+  cat:
+    names: Barsik,Marsik,Murzik,Sweety
+  dog:
+    names: Sharik,Bobik,Persic
+  mouse:
+    names: Pechenka,Molly
+  shark:
+    names: Alex,Dori,Bublik
+  wolf:
+    names: WhiteFang,Alpha,Nemo
+
+secretStore:
+  path:
+    rep: C:\\Users\\svetl\\IdeaProjects\\mts-homework-SSMironova\\spring\\animals\\src\\main\\resources\\secretStore
+    file: C:\\Users\\svetl\\IdeaProjects\\mts-homework-SSMironova\\spring\\animals\\src\\main\\resources\\secretStore\\secretInformation.txt
+logData:
+  path:
+    rep: C:\\Users\\svetl\\IdeaProjects\\mts-homework-SSMironova\\spring\\animals\\src\\main\\resources\\log
+    file: C:\\Users\\svetl\\IdeaProjects\\mts-homework-SSMironova\\spring\\animals\\src\\main\\resources\\log\\logData.txt
+results:
+  path:
+    rep: C:\\Users\\svetl\\IdeaProjects\\mts-homework-SSMironova\\spring\\animals\\src\\main\\resources\\results
+    file: C:\\Users\\svetl\\IdeaProjects\\mts-homework-SSMironova\\spring\\animals\\src\\main\\resources\\results\\findOlderAnimals.json
