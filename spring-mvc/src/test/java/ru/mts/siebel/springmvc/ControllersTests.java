@@ -1,13 +1,16 @@
 package ru.mts.siebel.springmvc;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
+import ru.mts.siebel.springmvc.dao.Person;
 import ru.mts.siebel.springmvc.dao.User;
 
 import java.time.LocalDate;
@@ -15,8 +18,7 @@ import java.util.stream.Stream;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 @WebMvcTest
 public class ControllersTests {
@@ -32,11 +34,15 @@ public class ControllersTests {
     }
 
     @ParameterizedTest
-    @MethodSource("fetchData")
-    public void testGreetController(final String name) throws Exception {
-        mockMvc.perform(post("/greet?name=" + name))
+    @MethodSource("fetchPersonData")
+    public void testGreetController(final String json) throws Exception {
+        ObjectMapper objectMapper = new ObjectMapper();
+        Person person = objectMapper.readValue(json, Person.class);
+        mockMvc.perform(post("/greet")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(json))
                 .andExpect(status().isOk())
-                .andExpect(content().string("Hello, " + name + "!"));
+                .andExpect(content().string("Hello, " + person.getName() + "!"));
     }
 
     @ParameterizedTest
@@ -96,9 +102,15 @@ public class ControllersTests {
         mockMvc.perform(get("/date/" + date))
                 .andExpect(status().isOk())
                 .andExpect(content().string("Valid date: " + date));
+        mockMvc.perform(get("/date/2003-01-31"))
+                .andExpect(status().isOk())
+                .andExpect(content().string("Valid date: 2003-01-31"));
         mockMvc.perform(get("/date/2024-0-0"))
                 .andExpect(status().isBadRequest())
                 .andExpect(content().string("Invalid date format: 2024-0-0, need: yyyy-MM-dd"));
+        mockMvc.perform(get("/date/2014-44-33"))
+                .andExpect(status().isBadRequest())
+                .andExpect(content().string("Invalid date format: 2014-44-33, need: yyyy-MM-dd"));
     }
 
     private static Stream<Arguments> fetchData() {
@@ -108,6 +120,16 @@ public class ControllersTests {
                 Arguments.arguments("Gleb"),
                 Arguments.arguments("Ivan"),
                 Arguments.arguments("Anna")
+        );
+    }
+
+    private static Stream<Arguments> fetchPersonData() {
+        return Stream.of(
+                Arguments.arguments("{\"name\": \"Sveta\"}"),
+                Arguments.arguments("{\"name\": \"Stas\"}"),
+                Arguments.arguments("{\"name\": \"Gleb\"}"),
+                Arguments.arguments("{\"name\": \"Ivan\"}"),
+                Arguments.arguments("{\"name\": \"Anna\"}")
         );
     }
 
